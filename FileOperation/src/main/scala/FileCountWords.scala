@@ -13,6 +13,5 @@ object FileCountWords extends App{
   val system = ActorSystem("FileCount")
   val fileReadingProps = Props[FileReadingActor];
   val fileReadingRef = system.actorOf(fileReadingProps,"File")
-  fileReadingRef ? "/home/knoldus/Desktop/data.txt"
-
+  fileReadingRef ? "./src/main/resources/data.txt"
 }
